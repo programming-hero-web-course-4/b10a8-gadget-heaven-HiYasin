@@ -18,6 +18,8 @@ import ErrorElement from './components/ErrorElement';
 import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import Statistics from './components/Statistics';
+import Others from './components/Others';
+
 
 
 const router = createBrowserRouter([
@@ -28,15 +30,25 @@ const router = createBrowserRouter([
     children:[
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: () => fetch('/public/fakeData.json'),
+        children:[
+          {
+            path: ":category"
+          }
+        ]
       },
       {
-        path: "/dashboard",
-        element: <Dashboard></Dashboard>
+        path: "dashboard",
+        element: <Dashboard></Dashboard>        
       },
       {
-        path: "/statistics",
+        path: "statistics",
         element: <Statistics></Statistics>
+      },
+      {
+        path:"others",
+        element: <Others></Others>
       }
     ]
   }

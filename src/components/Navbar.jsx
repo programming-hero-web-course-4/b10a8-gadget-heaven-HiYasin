@@ -1,5 +1,5 @@
 
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useParams } from "react-router-dom";
 import { GrCart } from "react-icons/gr";
 import { FaRegHeart } from "react-icons/fa";
 const Navbar = () => {
@@ -7,13 +7,24 @@ const Navbar = () => {
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="statistics">Statistics</NavLink></li>
         <li><NavLink to="dashboard">Dashboard</NavLink></li>
-        <li><a>Others</a></li>
+        <li><NavLink to="others">Others</NavLink></li>
     </>
 
     let currentLocation = useLocation();
+    // console.log(currentLocation);
     let currentPath = currentLocation.pathname;
     let bgText = "bg-[#9538E2] text-white";
-    currentPath === '/'? bgText = "bg-[#9538E2] text-white":bgText = "bg-white text-black";
+    const homePath = ["/", "/smart-phone", "/laptop", "/smart-watch", "/gaming-console", "/tablet"];
+    // currentPath === '/'? bgText = "bg-[#9538E2] text-white":bgText = "bg-white text-black";
+    // console.log(currentPath);
+
+    if (homePath.includes(currentPath)) {
+        bgText = "bg-[#9538E2] text-white";
+        // console.log("true");
+    }else{
+        bgText = "bg-gray-200 text-black";
+        // console.log("false");
+    }
     return (
         <div className={`navbar px-[5%] rounded-t-2xl ${bgText}`}>
             <div className="navbar-start">
@@ -38,7 +49,7 @@ const Navbar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <NavLink to='/' className="btn btn-ghost font-bold text-xl">Gadget Heaven</NavLink>
+                <NavLink to='/' className="font-bold text-xl">Gadget Heaven</NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-2">
