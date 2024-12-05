@@ -1,0 +1,329 @@
+[
+    {
+        "product_id": 1,
+        "product_name": "Realme GT 2 Pro",
+        "price": 799,
+        "availability": true,
+        "specification": [
+            "Screen Size: 6.7 inches AMOLED, 2K resolution",
+            "Processor: Snapdragon 8 Gen 1",
+            "Storage Options: 128GB, 256GB, 512GB",
+            "Camera: 50MP Main, 50MP Ultra Wide, 2MP Macro",
+            "Battery: 5,000mAh, 65W Fast Charging",
+            "Operating System: Realme UI 3.0 based on Android 12"
+        ],
+        "description": "A flagship killer offering 2K AMOLED display, cutting-edge Snapdragon 8 Gen 1 performance, and eco-friendly design.",
+        "rating": 4.5,
+        "category": "Smartphone",
+        "image_url": "https://i.ibb.co.com/g4rQX8H/01-Realme-GT-2-Pro.png"
+    },
+    {
+        "product_id": 2,
+        "product_name": "Google Pixel 7 Pro",
+        "price": 899,
+        "availability": true,
+        "specification": [
+            "Screen Size: 6.7 inches",
+            "Processor: Google Tensor G2",
+            "Storage Options: 128GB, 256GB, 512GB",
+            "Camera: 50MP Main, 48MP Telephoto, 12MP Ultra Wide",
+            "Battery: 5,000mAh",
+            "Operating System: Android 13"
+        ],
+        "description": "Google's flagship with powerful AI, advanced camera system, and Android 13.",
+        "rating": 4.7,
+        "category": "Smartphone",
+        "image_url": "https://i.ibb.co.com/3C1nk8F/02-Google-Pixel-7-Pro.png"
+    },
+    {
+        "product_id": 3,
+        "product_name": "Samsung Galaxy Z Fold 4",
+        "price": 1799,
+        "availability": true,
+        "specification": [
+            "Screen Size: 7.6 inches (Main), 6.2 inches (Cover)",
+            "Processor: Snapdragon 8+ Gen 1",
+            "Storage Options: 256GB, 512GB, 1TB",
+            "Camera: 50MP Main, 12MP Ultra Wide, 10MP Telephoto",
+            "Battery: 4,400mAh",
+            "Operating System: Android 12L"
+        ],
+        "description": "Samsung's premium foldable with two displays and multitasking capabilities.",
+        "rating": 4.6,
+        "category": "Smartphone",
+        "image_url": "https://i.ibb.co.com/kcFBfXX/03-Samsung-Galaxy-Z-Fold-4.png"
+    },
+    {
+        "product_id": 4,
+        "product_name": "iPhone 14 Pro Max",
+        "price": 1099,
+        "availability": true,
+        "specification": [
+            "Screen Size: 6.7 inches",
+            "Processor: A16 Bionic chip",
+            "Storage Options: 128GB, 256GB, 512GB, 1TB",
+            "Camera: 48MP Main, 12MP Ultra Wide",
+            "Battery: 4,323mAh",
+            "Operating System: iOS 16"
+        ],
+        "description": "Apple's largest flagship with superior battery life and a 48MP camera.",
+        "rating": 4.9,
+        "category": "Smartphone",
+        "image_url": "https://i.ibb.co.com/kJvj4m8/04-i-Phone-14-Pro-Max.png"
+    },
+    {
+        "product_id": 5,
+        "product_name": "OPPO Find X5 Pro",
+        "price": 1099,
+        "availability": true,
+        "specification": [
+            "Screen Size: 6.7 inches",
+            "Processor: Snapdragon 8 Gen 1",
+            "Storage Options: 256GB, 512GB",
+            "Camera: 50MP Main, 50MP Ultra Wide, 13MP Telephoto",
+            "Battery: 5,000mAh",
+            "Operating System: Android 12"
+        ],
+        "description": "Flagship device with premium design and advanced Hasselblad cameras.",
+        "rating": 4.5,
+        "category": "Smartphone",
+        "image_url": "https://i.ibb.co.com/thsd56P/05-OPPO-Find-X5-Pro.png"
+    },
+    {
+        "product_id": 6,
+        "product_name": "Xiaomi 12 Pro",
+        "price": 849,
+        "availability": true,
+        "specification": [
+            "Screen Size: 6.73 inches",
+            "Processor: Snapdragon 8 Gen 1",
+            "Storage Options: 128GB, 256GB, 512GB",
+            "Camera: 50MP Main, 50MP Ultra Wide, 50MP Telephoto",
+            "Battery: 4,600mAh",
+            "Operating System: Android 12"
+        ],
+        "description": "Feature-packed flagship with a triple 50MP camera setup.",
+        "rating": 4.4,
+        "category": "Smartphone",
+        "image_url": "https://i.ibb.co.com/s3C3LVL/06-Xiaomi-12-Pro.png"
+    },
+    {
+        "product_id": 7,
+        "product_name": "OnePlus 11",
+        "price": 799,
+        "availability": true,
+        "specification": [
+            "Screen Size: 6.7 inches",
+            "Processor: Snapdragon 8 Gen 2",
+            "Storage Options: 128GB, 256GB, 512GB",
+            "Camera: 50MP Main, 48MP Ultra Wide, 32MP Telephoto",
+            "Battery: 5,000mAh",
+            "Operating System: Android 13"
+        ],
+        "description": "OnePlus' latest flagship with cutting-edge hardware and OxygenOS.",
+        "rating": 4.5,
+        "category": "Smartphone",
+        "image_url": "https://i.ibb.co.com/1stksBQ/07-One-Plus-11.png"
+    },
+    {
+        "product_id": 8,
+        "product_name": "Microsoft Surface Laptop Studio",
+        "price": 1599,
+        "availability": true,
+        "specification": [
+            "Screen Size: 14.4 inches",
+            "Processor: Intel Core i7-11370H",
+            "Storage Options: 256GB, 512GB, 1TB, 2TB",
+            "RAM: 16GB, 32GB",
+            "Battery: Up to 19 hours",
+            "Operating System: Windows 11"
+        ],
+        "description": "Versatile laptop with a dynamic touchscreen and performance for creators.",
+        "rating": 4.7,
+        "category": "Laptop",
+        "image_url": "https://i.ibb.co.com/VvYnLp7/08-Microsoft-Surface-Laptop-Studio.png"
+    },
+    {
+        "product_id": 9,
+        "product_name": "ASUS ROG Zephyrus G14",
+        "price": 1499,
+        "availability": true,
+        "specification": [
+            "Screen Size: 14 inches",
+            "Processor: AMD Ryzen 9 6900HS",
+            "Storage Options: 512GB, 1TB",
+            "RAM: 16GB, 32GB",
+            "Battery: Up to 10 hours",
+            "Operating System: Windows 11"
+        ],
+        "description": "Compact gaming laptop with powerful Ryzen 9 and a high-refresh-rate display.",
+        "rating": 4.8,
+        "category": "Laptop",
+        "image_url": "https://i.ibb.co.com/h8FMKVw/09-ASUS-ROG-Zephyrus-G14.png"
+    },
+    {
+        "product_id": 10,
+        "product_name": "Lenovo ThinkPad X1 Carbon Gen 10",
+        "price": 1899,
+        "availability": true,
+        "specification": [
+            "Screen Size: 14 inches",
+            "Processor: Intel Core i7-1260P",
+            "Storage Options: 512GB, 1TB, 2TB",
+            "RAM: 16GB, 32GB",
+            "Battery: Up to 16 hours",
+            "Operating System: Windows 11"
+        ],
+        "description": "Premium business laptop with durability and performance.",
+        "rating": 4.6,
+        "category": "Laptop",
+        "image_url": "https://i.ibb.co.com/6wkfff8/10-Lenovo-Think-Pad-X1-Carbon-Gen-10.png"
+    },
+    {
+        "product_id": 11,
+        "product_name": "OPPO Pad Air",
+        "price": 249,
+        "availability": true,
+        "specification": [
+            "Screen Size: 10.36 inches",
+            "Processor: Qualcomm Snapdragon 680",
+            "Storage Options: 64GB, 128GB",
+            "Battery: 7,100mAh",
+            "Operating System: ColorOS for Pad"
+        ],
+        "description": "Budget-friendly tablet with a sleek design for everyday use.",
+        "rating": 4.2,
+        "category": "Tablet",
+        "image_url": "https://i.ibb.co.com/QdYHjBB/11-OPPO-Pad-Air.png"
+    },
+    {
+        "product_id": 12,
+        "product_name": "Realme Pad X",
+        "price": 299,
+        "availability": true,
+        "specification": [
+            "Screen Size: 10.95 inches",
+            "Processor: Qualcomm Snapdragon 695",
+            "Storage Options: 64GB, 128GB",
+            "Battery: 8,340mAh",
+            "Operating System: Realme UI for Pad"
+        ],
+        "description": "Affordable tablet with 5G support and a large display.",
+        "rating": 4.3,
+        "category": "Tablet",
+        "image_url": "https://i.ibb.co.com/BwcV247/12-Realme-Pad-X.png"
+    },
+    {
+        "product_id": 13,
+        "product_name": "Xiaomi Pad 5 Pro",
+        "price": 499,
+        "availability": true,
+        "specification": [
+            "Screen Size: 11 inches",
+            "Processor: Qualcomm Snapdragon 870",
+            "Storage Options: 128GB, 256GB",
+            "Battery: 8,600mAh",
+            "Operating System: MIUI for Pad"
+        ],
+        "description": "High-performance tablet with Dolby Vision and premium audio.",
+        "rating": 4.5,
+        "category": "Tablet",
+        "image_url": "https://i.ibb.co.com/09HVc7z/13-Xiaomi-Pad-5-Pro.png"
+    },
+    {
+        "product_id": 14,
+        "product_name": "Realme Watch 3 Pro",
+        "price": 99,
+        "availability": true,
+        "specification": [
+            "Screen Size: 1.78 inches AMOLED",
+            "Battery Life: Up to 10 days",
+            "Features: GPS, Heart Rate Monitoring, SpO2",
+            "Operating System: Proprietary"
+        ],
+        "description": "Smartwatch with GPS and fitness tracking features.",
+        "rating": 4.1,
+        "category": "Smartwatch",
+        "image_url": "https://i.ibb.co.com/ZhWxsXr/14-Realme-Watch-3-Pro.png"
+    },
+    {
+        "product_id": 15,
+        "product_name": "Samsung Galaxy Watch 5 Pro",
+        "price": 449,
+        "availability": true,
+        "specification": [
+            "Screen Size: 1.4 inches Super AMOLED",
+            "Battery Life: Up to 80 hours",
+            "Features: GPS, Body Composition, ECG",
+            "Operating System: Wear OS"
+        ],
+        "description": "Premium smartwatch designed for fitness and outdoor enthusiasts.",
+        "rating": 4.6,
+        "category": "Smartwatch",
+        "image_url": "https://i.ibb.co.com/Z8QN2v9/15-Samsung-Galaxy-Watch-5-Pro.png"
+    },
+    {
+        "product_id": 16,
+        "product_name": "Apple Watch Series 8",
+        "price": 399,
+        "availability": true,
+        "specification": [
+            "Screen Size: 1.9 inches Retina",
+            "Battery Life: Up to 18 hours",
+            "Features: Temperature Sensor, Crash Detection, ECG",
+            "Operating System: watchOS 9"
+        ],
+        "description": "Apple's advanced smartwatch with health monitoring and crash detection.",
+        "rating": 4.7,
+        "category": "Smartwatch",
+        "image_url": "https://i.ibb.co.com/Ksfk0Xq/15-Apple-Watch-Series-8.png"
+    },
+    {
+        "product_id": 17,
+        "product_name": "PlayStation 4 Pro",
+        "price": 399,
+        "availability": true,
+        "specification": [
+            "Processor: AMD Jaguar 8-Core",
+            "Graphics: AMD Radeon 4.2 TFLOPS",
+            "Storage Options: 1TB",
+            "Features: 4K Gaming, HDR Support"
+        ],
+        "description": "Sony's popular gaming console with enhanced performance for 4K gaming.",
+        "rating": 4.8,
+        "category": "Gaming Console",
+        "image_url": "https://i.ibb.co.com/g73j82T/16-Play-Station-4-Pro.png"
+    },
+    {
+        "product_id": 18,
+        "product_name": "Xbox Series X",
+        "price": 499,
+        "availability": true,
+        "specification": [
+            "Processor: AMD Zen 2 8-Core",
+            "Graphics: AMD RDNA 2 12 TFLOPS",
+            "Storage Options: 1TB SSD",
+            "Features: 4K Gaming, 120 FPS Support"
+        ],
+        "description": "Microsoft's next-gen console with stunning graphics and ultra-fast SSD.",
+        "rating": 4.9,
+        "category": "Gaming Console",
+        "image_url": "https://i.ibb.co.com/m5H5ZzT/17-Xbox-Series-X.png"
+    },
+    {
+        "product_id": 19,
+        "product_name": "PlayStation 5",
+        "price": 499,
+        "availability": true,
+        "specification": [
+            "Processor: AMD Zen 2 8-Core",
+            "Graphics: AMD RDNA 2 10.28 TFLOPS",
+            "Storage Options: 825GB SSD",
+            "Features: 4K Gaming, Ray Tracing, 120 FPS Support"
+        ],
+        "description": "Sony's next-gen gaming console with advanced performance and ray tracing.",
+        "rating": 4.9,
+        "category": "Gaming Console",
+        "image_url": "https://i.ibb.co.com/G36CMmp/18-Play-Station-5.png"
+    }
+]
