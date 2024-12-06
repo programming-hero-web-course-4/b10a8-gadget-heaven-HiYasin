@@ -5,9 +5,11 @@ import Footer from './Footer';
 
 const Root = () => {
     return (
-        <div className="max-w-11/12 mx-auto px-[5%] py-5">
+        <div>
            <Navbar></Navbar>
+           <div className='bg-gray-200'>
            <Outlet></Outlet>
+           </div>
            <Footer></Footer>
         </div>
     );

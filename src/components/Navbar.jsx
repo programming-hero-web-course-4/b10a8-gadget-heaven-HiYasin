@@ -19,14 +19,15 @@ const Navbar = () => {
     // console.log(currentPath);
 
     if (homePath.includes(currentPath)) {
-        bgText = "bg-[#9538E2] text-white";
+        bgText = "bg-[#9538E2] text-white mt-5";
         // console.log("true");
     }else{
-        bgText = "bg-gray-200 text-black";
+        bgText = "bg-white text-black";
         // console.log("false");
     }
     return (
-        <div className={`navbar px-[5%] rounded-t-2xl ${bgText}`}>
+        <div className="max-w-11/12 mx-auto px-[5%]">
+            <div className={`navbar px-[5%] py-2 rounded-t-2xl ${bgText}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -60,6 +61,7 @@ const Navbar = () => {
                 <button className="btn bg-white rounded-full text-blac"><GrCart /></button>
                 <button className="btn bg-white rounded-full text-black"><FaRegHeart /></button>
             </div>
+        </div>
         </div>
     );
 };
