@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
 import { IoHeartOutline } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
+import { Helmet } from "react-helmet";
 const ProductDetails = () => {
     const products = useLoaderData();
     const param = useParams();
@@ -12,6 +13,9 @@ const ProductDetails = () => {
     console.log(product);
     return (
         <div>
+            <Helmet>
+                <title>Gadget Heaven | {category}</title>
+            </Helmet>
             <div className="text-center bg-[#9538E2] text-white h-[500px]">
                 <div className="max-w-screen-md mx-auto pt-[100px]">
                     <h2 className="text-3xl font-bold ">Product Details</h2>
@@ -54,9 +58,9 @@ const ProductDetails = () => {
                         />
                         <span className={'text-base text-gray-500 font-semibold bg-gray-500/10 ml-2 px-4 py-1 rounded-full'}>{rating}</span>
                     </div>
-                    <div className="space-x-3">
+                    <div className="space-x-3 flex">
                         <button className="btn rounded-full text-lg text-white font-semibold bg-[#9538E2]">Add to Cart <IoCartOutline className="text-2xl text-white" /></button>
-                        <button className="btn rounded-full text-lg font-extrabold text-[#9538E2]"><IoHeartOutline /></button>
+                        <button className="btn rounded-full text-lg font-extrabold text-[#9538E2] border border-[#9538E2]"><IoHeartOutline /></button>
                     </div>
                 </div>
             </div>
