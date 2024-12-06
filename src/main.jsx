@@ -19,6 +19,7 @@ import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import Statistics from './components/Statistics';
 import Others from './components/Others';
+import ProductDetails from './components/ProductDetails';
 
 
 
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
             path: ":category"
           }
         ]
+      },
+      {
+        path:":category/:product_id",
+        element: <ProductDetails></ProductDetails>,
+        loader: () => fetch('/public/fakeData.json')
       },
       {
         path: "dashboard",

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Product = ({product}) => {
 
 
@@ -12,11 +14,12 @@ const Product = ({product}) => {
             <h2 className={'text-xl font-semibold'}>{product_name}</h2>
             <p className={'text-lg font-semibold text-gray-500'}>Price: {price} $</p>
             <div className={'my-1'}>
-                <a className={`w-full`}>
+                <div className={`w-full`}>
                     <button className={'bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-0.5 rounded-full cursor-pointer active:scale-95 transition transform duration-100'}>
-                        <div className={'bg-white w-full h-full px-5 py-2 rounded-full text-[#9538e2] text-lg font-bold'}>View Details</div>
+                        <Link to={`${category}/${product_id}`}><div className={'bg-white w-full h-full px-5 py-2 rounded-full text-[#9538e2] text-lg font-bold'}>View Details</div></Link>
                     </button>
-                </a>
+                    
+                </div>
             </div>
 
         </div>
