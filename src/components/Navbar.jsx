@@ -7,7 +7,7 @@ const Navbar = () => {
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="statistics">Statistics</NavLink></li>
         <li><NavLink to="dashboard">Dashboard</NavLink></li>
-        <li><NavLink to="others">Others</NavLink></li>
+        <li><NavLink to="discount">Discount</NavLink></li>
     </>
 
     let currentLocation = useLocation();
