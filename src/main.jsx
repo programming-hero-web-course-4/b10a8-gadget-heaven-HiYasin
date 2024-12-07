@@ -12,7 +12,8 @@ import Statistics from './components/Statistics';
 import Discount from './components/Discount';
 import ProductDetails from './components/ProductDetails';
 // import { HelmetProvider } from 'react-helmet-async';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter([
   {
@@ -64,5 +65,17 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer
+      position="bottom-right"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="dark"
+      transition:Bounce />
   </StrictMode>
 )

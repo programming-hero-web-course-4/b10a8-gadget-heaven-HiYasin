@@ -2,6 +2,7 @@ import { MdDeleteForever } from "react-icons/md";
 import { addToList, removeFromList } from "../utility/addToDb";
 import { useContext } from "react";
 import { DashboardContext } from "./Root";
+import { toast } from "react-toastify";
 const WishlistedProducts = ({ product }) => {
     const { product_id, image_url, product_name, description, price } = product;
 
@@ -10,19 +11,21 @@ const WishlistedProducts = ({ product }) => {
         const newCart = [...cart];
         const newWishlist = [...wishlist];
         if(newCart.find(x=>x === id)){
-            console.log("This product has already been added to the cart");
+            toast.error("This product has already been added to the cart");
         }else{
             newCart.push(id);
             setCart(newCart);
             newWishlist.splice(newWishlist.indexOf(id), newWishlist.indexOf(id)+1);
             console.log(newWishlist.indexOf(id), newWishlist.indexOf(id)+1);
             setWishlist(newWishlist);
+            toast.success("Product added to the cart successfully");
         }
     }
     const removeFromCart = (id) => {
         const currentCart = [...wishlist];
         const updatedCart = currentCart.filter((item) => item!== id);
         setWishlist(updatedCart);
+        toast.success("Product is removed from wish list successfully");
     };
     console.log(cart);
     return (

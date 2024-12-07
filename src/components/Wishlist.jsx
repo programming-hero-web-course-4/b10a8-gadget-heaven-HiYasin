@@ -3,6 +3,7 @@ import { useState, useEffect, useContext } from "react";
 import WishlistedProducts from "./WishlistedProducts";
 import { useLoaderData } from "react-router-dom";
 import { DashboardContext } from "./Root";
+import { toast } from "react-toastify";
 
 const Wishlist = () => {
     //get context
@@ -27,7 +28,7 @@ const Wishlist = () => {
     const handleSort = () => {
         const sortedList = [...cartProducts].sort((a, b) => b.price - a.price);
         setCartProducts(sortedList);
-        console.log(sortedList);
+        toast.success("Sorted Successfully");
     }
     return (
         <div className="max-w-screen-xl mx-auto py-10">

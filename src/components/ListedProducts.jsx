@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { MdDeleteForever } from "react-icons/md";
 import { DashboardContext } from "./Root";
+
+import { toast } from "react-toastify";
 const ListedProducts = ({ product }) => {
 
     const { image_url, product_name, description, price, product_id } = product;
@@ -10,6 +12,7 @@ const ListedProducts = ({ product }) => {
         const currentCart = [...cart];
         const updatedCart = currentCart.filter((item) => item!== id);
         setCart(updatedCart);
+        toast.error("Product deleted from the cart!");
     };
     console.log(cart);
 

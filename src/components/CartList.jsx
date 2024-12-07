@@ -3,6 +3,7 @@ import ListedProducts from "./ListedProducts";
 import { useLoaderData } from "react-router-dom";
 import { HiAdjustmentsVertical } from "react-icons/hi2";
 import { DashboardContext } from "./Root";
+import { toast } from "react-toastify";
 const CartList = () => {
 
     //get context
@@ -27,7 +28,7 @@ const CartList = () => {
     const handleSort = () => {
         const sortedList = [...cartProducts].sort((a, b) => b.price - a.price);
         setCartProducts(sortedList);
-        console.log(sortedList);
+        toast.success("Sort successfully");
     }
 
     return (

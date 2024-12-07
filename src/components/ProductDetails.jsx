@@ -3,8 +3,7 @@ import ReactStars from "react-rating-stars-component";
 import { IoHeartOutline } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
 import { Helmet } from "react-helmet";
-
-import { addToList } from "../utility/addToDb";
+import { toast } from "react-toastify";
 import { useContext } from "react";
 import { DashboardContext } from "./Root";
 
@@ -22,20 +21,22 @@ const ProductDetails = () => {
     const handleCart=(id)=>{
         const newCart = [...cart];
         if(newCart.find(x=>x === id)){
-            console.log("This product has already been added to the cart");
+            toast.error("This product has already been added to the cart!");
         }else{
             newCart.push(id);
             setCart(newCart);
+            toast.success("Added product to cart successfully");
         }
     }
 
     const handlewishlist=(id)=>{
         const newWishlist = [...wishlist];
         if(newWishlist.find(x=>x === id)){
-            console.log("There product is already been added to the wishlist");
+            toast.error("This product has already been added to the wish list!");
         }else{
             newWishlist.push(id);
             setWishlist(newWishlist);
+            toast.success("Added product to wish list successfully");
         }
     }
     //console.log(cart);
