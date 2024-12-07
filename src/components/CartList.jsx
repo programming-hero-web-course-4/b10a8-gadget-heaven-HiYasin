@@ -1,11 +1,12 @@
 import { useState, useEffect, useContext } from "react";
 import ListedProducts from "./ListedProducts";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import { HiAdjustmentsVertical } from "react-icons/hi2";
 import { DashboardContext } from "./Root";
 import { toast } from "react-toastify";
 import successImg from '../assets/Group.png'
 const CartList = () => {
+    const navigate = useNavigate();
 
     //get context
     const [cart, setCart, wishlist, setWishlist] = useContext(DashboardContext);
@@ -34,13 +35,13 @@ const CartList = () => {
     }
 
     const purchase = () => {
-
         setCart([]);
         setCartProducts([]);
-
-
     }
 
+    const handleNavigate = () => {
+        navigate("/");
+    };
     return (
         <div className="max-w-screen-xl mx-auto py-10">
             <div className="modal" role="dialog" id="my_modal_8">
@@ -51,7 +52,7 @@ const CartList = () => {
                     <h3 className="font-bold text-lg">Payment Successfully</h3>
                     <p className="py-4">Thanks for purchasing.</p>
                     <div className="modal-action">
-                        <Link to="/" className="btn">Close</Link>
+                        <a onClick={handleNavigate} className="btn">Close</a>
                     </div>
                 </div>
             </div>

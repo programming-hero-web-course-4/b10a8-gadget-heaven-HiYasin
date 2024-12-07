@@ -1,5 +1,4 @@
 import { MdDeleteForever } from "react-icons/md";
-import { addToList, removeFromList } from "../utility/addToDb";
 import { useContext } from "react";
 import { DashboardContext } from "./Root";
 import { toast } from "react-toastify";
