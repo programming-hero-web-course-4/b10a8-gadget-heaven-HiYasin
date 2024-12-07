@@ -28,11 +28,11 @@ const Products = () => {
                 <div className="col-span-3">
                     <ul className="p-6 border space-y-2 bg-white rounded-2xl">
                         <li><NavLink to='/' onClick={() => { handleFilter('/') }} className="btn w-full btn-circle">All Products</NavLink></li>
-                        <li><NavLink to='laptop' onClick={() => { handleFilter('Laptop') }} className="btn w-full btn-circle">Laptop</NavLink></li>
-                        <li><NavLink to='tablet' onClick={() => { handleFilter('Tablet') }} className="btn w-full btn-circle">Tablet</NavLink></li>
-                        <li><NavLink to='smart-watch' onClick={() => { handleFilter('Smartwatch') }} className="btn w-full btn-circle">Smart Watch</NavLink></li>
-                        <li><NavLink to='gaming-console' onClick={() => { handleFilter('Gaming Console') }} className="btn w-full btn-circle">Gaming Console</NavLink></li>
-                        <li><NavLink to='smart-phone' onClick={() => { handleFilter('Smartphone') }} className="btn w-full btn-circle">Smart Phones</NavLink></li>
+                        <li><NavLink to='/laptop' onClick={() => { handleFilter('Laptop') }} className="btn w-full btn-circle">Laptop</NavLink></li>
+                        <li><NavLink to='/tablet' onClick={() => { handleFilter('Tablet') }} className="btn w-full btn-circle">Tablet</NavLink></li>
+                        <li><NavLink to='/smart-watch' onClick={() => { handleFilter('Smartwatch') }} className="btn w-full btn-circle">Smart Watch</NavLink></li>
+                        <li><NavLink to='/gaming-console' onClick={() => { handleFilter('Gaming Console') }} className="btn w-full btn-circle">Gaming Console</NavLink></li>
+                        <li><NavLink to='/smart-phone' onClick={() => { handleFilter('Smartphone') }} className="btn w-full btn-circle">Smart Phones</NavLink></li>
                     </ul>
                 </div>
 

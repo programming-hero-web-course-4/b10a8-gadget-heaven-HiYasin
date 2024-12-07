@@ -5,9 +5,9 @@ import { FaRegHeart } from "react-icons/fa";
 const Navbar = () => {
     const navItems = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="statistics">Statistics</NavLink></li>
-        <li><NavLink to="dashboard">Dashboard</NavLink></li>
-        <li><NavLink to="discount">Discount</NavLink></li>
+        <li><NavLink to="/statistics">Statistics</NavLink></li>
+        <li><NavLink to="/dashboard">Dashboard</NavLink></li>
+        <li><NavLink to="/discount">Discount</NavLink></li>
     </>
 
     let currentLocation = useLocation();

@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('/public/fakeData.json'),
+        loader: () => fetch('/fakeData.json'),
         children: [
           {
             path: ":category"
@@ -31,31 +31,30 @@ const router = createBrowserRouter([
         ]
       },
       {
-        path: ":category/:product_id",
+        path: "/:category/:product_id",
         element: <ProductDetails></ProductDetails>,
-        loader: () => fetch('/public/fakeData.json')
+        loader: () => fetch('/fakeData.json')
       },
       {
-        path: "dashboard",
+        path: "/dashboard",
         element: <Dashboard></Dashboard>,
-        // children: [
-        //   {
-        //     path: "/dashboard/cart",
-        //     element: <Cart></Cart>,
-        //   },
-        //   {
-        //     path: "/dashboard/wishlist",
-        //     element: <Wishlist></Wishlist>,
-        //   }
-        // ]
+        loader: () => fetch('/fakeData.json'),
+        children: [
+          {
+            path: "/dashboard/cart"
+          },
+          {
+            path: "/dashboard/wishlist"
+          }
+        ]
       },
       {
-        path: "statistics",
-        loader: () => fetch('/public/fakeData.json'),
+        path: "/statistics",
+        loader: () => fetch('/fakeData.json'),
         element: <Statistics></Statistics>
       },
       {
-        path: "discount",
+        path: "/discount",
         element: <Discount></Discount>
       }
     ]

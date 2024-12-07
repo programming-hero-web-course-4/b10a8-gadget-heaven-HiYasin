@@ -16,7 +16,7 @@ const Product = ({product}) => {
             <div className='my-1'>
                 <div className={`w-full`}>
                     <button className='bg-gradient-to-b from-[#9538E2] to-pink-500 p-0.5 rounded-full cursor-pointer'>
-                        <Link to={`${category}/${product_id}`}><div className='bg-white w-full h-full px-5 py-2 rounded-full text-[#9538e2] text-lg font-bold'>View Details</div></Link>
+                        <Link to={`/${category}/${product_id}`}><div className='bg-white w-full h-full px-5 py-2 rounded-full text-[#9538e2] text-lg font-bold'>View Details</div></Link>
                     </button>
                 </div>
             </div>

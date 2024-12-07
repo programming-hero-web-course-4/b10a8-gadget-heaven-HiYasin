@@ -3,14 +3,20 @@ import ReactStars from "react-rating-stars-component";
 import { IoHeartOutline } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
 import { Helmet } from "react-helmet";
+
+import { addToList } from "../utility/addToDb";
 const ProductDetails = () => {
     const products = useLoaderData();
     const param = useParams();
-    console.log(param);
-    console.log(products.length);
+    //console.log(param);
+    //console.log(products.length);
     const product = products.find((p) => p.product_id == parseInt(param.product_id));
     const { product_id, product_name, image_url, category, price, rating, description, availability, specification } = product;
-    console.log(product);
+    //console.log(product);
+
+    const handlCart=(id,list)=>{
+        addToList(id, list);
+    }
     return (
         <div>
             <Helmet>
@@ -59,8 +65,8 @@ const ProductDetails = () => {
                         <span className={'text-base text-gray-500 font-semibold bg-gray-500/10 ml-2 px-4 py-1 rounded-full'}>{rating}</span>
                     </div>
                     <div className="space-x-3 flex">
-                        <button className="btn rounded-full text-lg text-white font-semibold bg-[#9538E2]">Add to Cart <IoCartOutline className="text-2xl text-white" /></button>
-                        <button className="btn rounded-full text-lg font-extrabold text-[#9538E2] border border-[#9538E2]"><IoHeartOutline /></button>
+                        <button onClick={()=>{handlCart(product_id,'cartlist')}} className="btn rounded-full text-lg text-white font-semibold bg-[#9538E2]">Add to Cart <IoCartOutline className="text-2xl text-white" /></button>
+                        <button onClick={()=>{handlCart(product_id, 'wishlist')}} className="btn rounded-full text-lg font-extrabold text-[#9538E2] border border-[#9538E2]"><IoHeartOutline /></button>
                     </div>
                 </div>
             </div>
