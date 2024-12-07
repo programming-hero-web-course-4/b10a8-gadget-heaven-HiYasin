@@ -5,6 +5,10 @@ import { IoCartOutline } from "react-icons/io5";
 import { Helmet } from "react-helmet";
 
 import { addToList } from "../utility/addToDb";
+import { useContext } from "react";
+import { DashboardContext } from "./Root";
+
+
 const ProductDetails = () => {
     const products = useLoaderData();
     const param = useParams();
@@ -14,9 +18,27 @@ const ProductDetails = () => {
     const { product_id, product_name, image_url, category, price, rating, description, availability, specification } = product;
     //console.log(product);
 
-    const handlCart=(id,list)=>{
-        addToList(id, list);
+    const [cart, setCart, wishlist, setWishlist] = useContext(DashboardContext);
+    const handleCart=(id)=>{
+        const newCart = [...cart];
+        if(newCart.find(x=>x === id)){
+            console.log("This product has already been added to the cart");
+        }else{
+            newCart.push(id);
+            setCart(newCart);
+        }
     }
+
+    const handlewishlist=(id)=>{
+        const newWishlist = [...wishlist];
+        if(newWishlist.find(x=>x === id)){
+            console.log("There product is already been added to the wishlist");
+        }else{
+            newWishlist.push(id);
+            setWishlist(newWishlist);
+        }
+    }
+    //console.log(cart);
     return (
         <div>
             <Helmet>
@@ -65,8 +87,12 @@ const ProductDetails = () => {
                         <span className={'text-base text-gray-500 font-semibold bg-gray-500/10 ml-2 px-4 py-1 rounded-full'}>{rating}</span>
                     </div>
                     <div className="space-x-3 flex">
-                        <button onClick={()=>{handlCart(product_id,'cartlist')}} className="btn rounded-full text-lg text-white font-semibold bg-[#9538E2]">Add to Cart <IoCartOutline className="text-2xl text-white" /></button>
-                        <button onClick={()=>{handlCart(product_id, 'wishlist')}} className="btn rounded-full text-lg font-extrabold text-[#9538E2] border border-[#9538E2]"><IoHeartOutline /></button>
+                        <button onClick={()=>{handleCart(product_id)}} className={`btn rounded-full text-lg text-white font-semibold bg-[#9538E2]`}>
+                            Add to Cart <IoCartOutline className="text-2xl text-white" />
+                            </button>
+                        <button onClick={()=>{handlewishlist(product_id)}} className={wishlist.find(x=> x === product_id)?`btn btn-disabled rounded-full text-lg font-extrabold text-[#9538E2] border border-[#9538E2]`:`btn rounded-full text-lg font-extrabold text-[#9538E2] border border-[#9538E2]`}>
+                            <IoHeartOutline />
+                        </button>
                     </div>
                 </div>
             </div>

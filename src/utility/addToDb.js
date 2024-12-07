@@ -24,4 +24,16 @@ const addToList = (id, list) =>{
     }
 };
 
-export {addToList, getList}
+const removeFromList = (id, list) => {
+    const storedList = getList(list);
+    if(storedList.includes(id)){
+        storedList.splice(storedList.indexOf(id), storedList.indexOf(id)+1);
+        console.log(id, storedList.indexOf(id), storedList.indexOf(id)+1);
+        localStorage.setItem(list, JSON.stringify(storedList));
+        //console.log("Product removed from read list successfully");
+    }
+        //const notify = toast.success("Book removed from read list successfully");
+    // const newStoredList = storedList.filter(storedId => storedId !== id);
+}
+
+export {addToList,removeFromList, getList}

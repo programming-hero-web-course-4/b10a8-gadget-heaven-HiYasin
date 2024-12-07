@@ -1,7 +1,9 @@
 
-import { NavLink, useLocation, useParams } from "react-router-dom";
+import { NavLink, useLocation, Link } from "react-router-dom";
 import { GrCart } from "react-icons/gr";
 import { FaRegHeart } from "react-icons/fa";
+import { useContext } from "react";
+import { DashboardContext } from "./Root";
 const Navbar = () => {
     const navItems = <>
         <li><NavLink to="/">Home</NavLink></li>
@@ -25,6 +27,11 @@ const Navbar = () => {
         bgText = "bg-white text-black";
         // console.log("false");
     }
+
+    //this is for cart and heart icon
+    const [cart, setCart, wishlist, setWishlist] = useContext(DashboardContext);
+
+    //console.log(wishlist);
     return (
         <div className="max-w-11/12 mx-auto px-[5%]">
             <div className={`navbar px-[5%] py-4 rounded-t-2xl ${bgText}`}>
@@ -58,18 +65,29 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-4 ">
-                    <div className="indicator">
-                        <span className="indicator-item badge bg-black border-none text-white">1</span>
-                        <button className="btn bg-white rounded-full text-black"><GrCart /></button>
-                    </div>
-                    <div className="indicator">
-                        <span className="indicator-item badge bg-black border-none text-white">1</span>
-                        <button className="btn bg-white rounded-full text-black"><FaRegHeart /></button>
-                    </div>
-                    
+
+
+                        <div className="indicator">
+                            <span className="indicator-item badge bg-black border-none text-white">{cart.length}</span>
+                            <Link to="/dashboard">
+                            <button className="btn bg-white rounded-full text-black"><GrCart /></button>
+                            </Link>
+                            
+                        </div>
+
+
+
+                        <div className="indicator">
+                            <span className="indicator-item badge bg-black border-none text-white">{wishlist.length}</span>
+                            <Link to="/dashboard">
+                            <button className="btn bg-white rounded-full text-black"><FaRegHeart /></button>
+                            </Link>
+                        </div>
+
+
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 
